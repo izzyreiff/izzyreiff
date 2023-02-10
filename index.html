@@ -1,10 +1,62 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>My Personal Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm a web developer with a passion for creating beautiful, functional websites. I have experience with HTML, CSS, JavaScript, and several popular frameworks and libraries. I'm constantly learning and expanding my skill set to stay up-to-date with the latest web technologies.</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/350x150" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>This was a website I built for a local small business. It was a great opportunity to practice using responsive design and mobile-first development.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/350x150" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>For this project, I worked on a team to build a web app that allows users to easily search and compare different travel destinations. It was a great opportunity to learn and use React.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Copyright © 2023 My Personal Portfolio</p>
+  </footer>
+
+</body>
+
 </html>
