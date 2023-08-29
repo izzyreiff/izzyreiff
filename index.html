@@ -74,19 +74,40 @@
     } */
   </style>
   <script>
+    // JavaScript to toggle color mode
     document.addEventListener('DOMContentLoaded', function () {
       const colorSchemeToggle = document.getElementById('color-scheme-toggle');
       const body = document.body;
-      
+
+      // Check the user's preferred color scheme
       const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      // Set the initial color scheme based on the user's preference
       body.classList.add(userColorScheme + '-mode');
+
+      const icon = colorSchemeToggle.querySelector('.icon');
+
+      // Set the initial icon based on the user's preference
+      icon.classList.add(userColorScheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon');
 
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
+
+        // Toggle the icon classes
+        if (icon.classList.contains('fas fa-sun')) {
+          icon.classList.remove('fas fa-sun');
+          icon.classList.add('fas fa-moon');
+        } else {
+          icon.classList.remove('fas fa-moon');
+          icon.classList.add('fas fa-sun');
+        }
       });
     });
+
   </script>
+  <script src="https://kit.fontawesome.com/aac5439eef.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <p>Hi! I'm Izzy Reiff. I'm a Cyber Officer in the U.S. Army.</p>
@@ -98,7 +119,7 @@
   </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
   <button id="color-scheme-toggle">
-    <span class="icon" aria-hidden="true"></span>
+    <i class="icon"></i>
   </button>
 </body>
 </html>
