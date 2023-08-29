@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/aac5439eef.js" crossorigin="anonymous"></script>
   <style>
     * { box-sizing: border-box; }
     @font-face {
@@ -66,12 +67,7 @@
       background-color: #273746;
       color: #ffffff;
     }
-    /* Icon styles
-     .icon {
-      /* width: 10px;
-      height: 10px;
-      margin-right: 10px;
-    } */
+    
   </style>
   <script>
     // JavaScript to toggle color mode
@@ -88,25 +84,23 @@
       const icon = colorSchemeToggle.querySelector('.icon');
 
       // Set the initial icon based on the user's preference
-      icon.classList.add(userColorScheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon');
+      icon.classList.add(userColorScheme === 'dark' ? 'fa-regular fa-sun' : 'fa-regular fa-moon');
 
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
 
         // Toggle the icon classes
-        if (icon.classList.contains('fas fa-sun')) {
-          icon.classList.remove('fas fa-sun');
-          icon.classList.add('fas fa-moon');
+        if (icon.classList.contains('fa-regular fa-sun')) {
+          icon.classList.remove('fa-regular fa-sun');
+          icon.classList.add('fa-regular fa-moon');
         } else {
-          icon.classList.remove('fas fa-moon');
-          icon.classList.add('fas fa-sun');
+          icon.classList.remove('fa-regular fa-moon');
+          icon.classList.add('fa-regular fa-sun');
         }
       });
     });
-
   </script>
-  <script src="https://kit.fontawesome.com/aac5439eef.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -119,7 +113,7 @@
   </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
   <button id="color-scheme-toggle">
-    <i class="icon"></i>
+    <i class=""></i>
   </button>
 </body>
 </html>
