@@ -84,19 +84,19 @@
       const icon = colorSchemeToggle.querySelector('i'); // Select the <i> element directly
 
       // Set the initial icon based on the user's preference
-      icon.classList.add(userColorScheme === 'dark' ? 'fa-moon' : 'fa-sun');
+      icon.classList.add(userColorScheme === 'dark' ? 'fa fa-moon' : 'fa fa-sun');
 
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
 
         // Toggle the icon classes
-        if (icon.classList.contains('fa-sun')) {
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
+        if (icon.classList.contains('fa fa-sun')) {
+          icon.classList.remove('fa fa-sun');
+          icon.classList.add('fa fa-moon');
         } else {
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
+          icon.classList.remove('fa fa-moon');
+          icon.classList.add('fa fa-sun');
         }
       });
     });
