@@ -18,6 +18,7 @@
     }
 
     body {
+      position: relative; /* Set body as the positioning reference */
       max-width: 90%;
       padding-left: 3%;
       padding-top: 5px;
@@ -47,7 +48,22 @@
     }
 
     /* Button styles */
+    /* #color-scheme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      color: #273746;
+      border: none;
+      padding: 4px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    } */
     #color-scheme-toggle {
+      position: fixed; /* Fixed positioning */
+      bottom: 20px; /* Adjust the distance from the bottom */
+      right: 20px; /* Adjust the distance from the right */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,7 +105,8 @@
     <li>I'm passionate about many things, including attending concerts, scuba diving, web design, musicals, working out, connecting with new people, and traveling.</li>
   </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
-  <p>You can toggle Night/Day mode <button id="color-scheme-toggle"><span class="" aria-hidden="true"></span>here</button>.
-  </p>
+  <button id="color-scheme-toggle">
+    <span class="icon" aria-hidden="true"></span>
+  </button>
 </body>
 </html>
