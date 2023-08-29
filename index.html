@@ -1,148 +1,95 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>izzy reiff</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap" rel="stylesheet">
-    <style>
-    * 	
-    {
-    box-sizing: border-box;
-		}
-  
-	/* latin */
-	/* @font-face {
-	  font-family: 'Inconsolata';
-	  font-style: normal;
-	  font-weight: 700;
-	  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v16/QldXNThLqRwH-OJ1UHjlKGHiw71p5_zaDpwm.woff2) format('woff2');
-	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-	} */
-  /* Courier */
-  /* @font-face { */
-    /* font-family: 'Courier Prime', monospace;
-    font-style: normal;
-    font-weight: 250;
-    src: local();
-  } */
-  /* Garamond */
-  @font-face {
-    font-family: 'EB Garamond', serif;
-    font-style: normal;
-    font-weight: 250;
-    src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap');
-  }
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>izzy reiff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    
+    @font-face {
+      font-family: 'EB Garamond', serif;
+      font-style: normal;
+      font-weight: 250;
+      src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap');
+    }
 
-	body {
-    max-width: 90%;
-    padding-left: 3%;
-    padding-top: 5px;
-	}
+    body {
+      max-width: 90%;
+      padding-left: 3%;
+      padding-top: 5px;
+      font-family: 'EB Garamond', serif;
+      line-height: 1.8;
+      color: #273746;
+    }
 
-	p {
-    /* font-family: 'Courier Prime', monospace; */
-    font-family: 'EB Garamond', serif;
-    line-height: 1.8;
-    color: #273746;
-	}
+    a:any-link { color: rgb(255, 37, 197); }
+    a:hover, a:visited:hover a:visited {
+      color: #a72486;
+      text-decoration-style: wavy;
+    }
 
-	li {
-    /* font-family: 'Courier Prime', monospace; */
-    font-family: 'EB Garamond', serif;
-    line-height: 1.8;
-    color: #273746;
-	}
-  a:any-link {
-    color: rgb(255, 37, 197);
-	}
-	a:hover, a:visited:hover a:visited{
-    color: #a72486;
-    text-decoration-style: wavy;
-	}
-  /* Light mode styles */
-  body.light-mode {
-    background-color: #ffffff;
-    color: #273746;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #273746;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #1f1f1f;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  /* Button styles */
-  #color-scheme-toggle {
-    background-color: #ffffff;
-    color: #273746;
-    border: none;
-    padding: 2px 2px;
-    /* font-size: 16px; */
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #1f1f1f;
+      color: #d1c4c4;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-  #color-scheme-toggle:hover {
-    background-color: #273746;
-    color: #ffffff;
-  }
+    /* Button styles */
+    #color-scheme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      color: #273746;
+      border: none;
+      padding: 4px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-  /* Icon styles */
-  .icon {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 50%;
-    /* background-image: url('path-to-your-icon.png'); Replace with your icon image */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-  }
-
-	</style>
-  <!-- <link rel="icon" type="img/png" href="" sizes="32x32"> -->
+    #color-scheme-toggle:hover {
+      background-color: #273746;
+      color: #ffffff;
+    }
+  </style>
   <script>
-    // JavaScript to toggle color mode
-  document.addEventListener('DOMContentLoaded', function () {
-    const colorSchemeToggle = document.getElementById('color-scheme-toggle');
-    const body = document.body;
+    document.addEventListener('DOMContentLoaded', function () {
+      const colorSchemeToggle = document.getElementById('color-scheme-toggle');
+      const body = document.body;
+      
+      const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      body.classList.add(userColorScheme + '-mode');
 
-    // Check the user's preferred color scheme
-    const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-    // Set the initial color scheme based on the user's preference
-    body.classList.add(userColorScheme + '-mode');
-
-    colorSchemeToggle.addEventListener('click', function () {
-      body.classList.toggle('light-mode');
-      body.classList.toggle('dark-mode');
+      colorSchemeToggle.addEventListener('click', function () {
+        body.classList.toggle('light-mode');
+        body.classList.toggle('dark-mode');
+      });
     });
-  });
-
   </script>
 </head>
-
 <body>
   <p>Hi! I'm Izzy Reiff. I'm a Cyber Officer in the U.S. Army.</p>
-	<ul>
-		<li><p>I was born and raised in Los Angeles, attended college in New York, and now reside under the extreme sun of Augusta, Georgia.</p>
-    </li>
-		<li><p>I graduated from West Point (USMA) with a B.S. in Cyber Science and a concentration in Cyber Operations. I had a lot of fun playing snare drum for our Pipes and Drums band and co-leading the Theater Arts Guild.</p>
-    </li>
-		<li><p>In high school, I built websites and created content for various startups, companies, and people. I also co-founded an app called <a href="https://techcrunch.com/2018/07/22/trill-project-aims-to-be-a-safe-community-for-people-to-express-their-true-selves/" target="_blank" rel="noopener noreferrer">The Trill Project</a>, which was a <a href="https://techcrunch.com/2021/10/05/blue-fever-an-anonymous-social-network-acquires-gen-z-founded-trill/" target="_blank" rel="noopener noreferrer">blast</a>!</p>
-    </li>
-    <li><p>I'm passionate about many things, including attending concerts, scuba diving, web design, musicals, working out, connecting with new people, and traveling..</p>
-    </li>
-	</ul>
+  <ul>
+    <li>I was born and raised in Los Angeles, attended college in New York, and now reside under the extreme sun of Augusta, Georgia.</li>
+    <li>I graduated from West Point with a B.S. in Cyber Science and a concentration in Cyber Operations. I had a lot of fun playing snare drum for our Pipes and Drums band and seeing Broadway shows with the Theater Arts Guild.</li>
+    <li>In high school, I built websites and created content for various startups, companies, and people. I also co-founded an app called <a href="https://techcrunch.com/2018/07/22/trill-project-aims-to-be-a-safe-community-for-people-to-express-their-true-selves/" target="_blank" rel="noopener noreferrer">The Trill Project</a>, which was a <a href="https://techcrunch.com/2021/10/05/blue-fever-an-anonymous-social-network-acquires-gen-z-founded-trill/" target="_blank" rel="noopener noreferrer">blast</a>!</li>
+    <li>I'm passionate about many things, including attending concerts, scuba diving, web design, musicals, working out, connecting with new people, and traveling.</li>
+  </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
-  <p>You can toggle Night/Day mode <button id="color-scheme-toggle">
-    <span class="icon" aria-hidden="true"></span>here</button>.
+  <p>You can toggle Night/Day mode <button id="color-scheme-toggle"><span class="" aria-hidden="true"></span>here</button>.
   </p>
 </body>
 </html>
