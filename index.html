@@ -16,9 +16,8 @@
       font-weight: 250;
       src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap');
     }
-
     body {
-      position: relative; /* Set body as the positioning reference */
+      position: relative;
       max-width: 90%;
       padding-left: 3%;
       padding-top: 5px;
@@ -26,27 +25,24 @@
       line-height: 1.8;
       color: #273746;
     }
-
     a:any-link { color: rgb(255, 37, 197); }
     a:hover, a:visited:hover a:visited {
       color: #a72486;
       text-decoration-style: wavy;
     }
-
     /* Light mode styles */
     body.light-mode {
       background-color: #ffffff;
       color: #273746;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     /* Dark mode styles */
     body.dark-mode {
       background-color: #1f1f1f;
       color: #d1c4c4;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
+    /* Light mode toggle button */
     #color-scheme-toggle {
       position: fixed;
       bottom: 25px;
@@ -62,31 +58,29 @@
       border-radius: 5px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     #color-scheme-toggle:hover {
+      background-color: #a5a5a5; /* Change color for light mode button hover */
+      color: #ffffff;
+    }
+    /* Dark mode toggle button */
+    body.dark-mode #color-scheme-toggle:hover {
       background-color: #273746;
       color: #ffffff;
     }
-    
   </style>
   <script>
     // JavaScript to toggle color mode
     document.addEventListener('DOMContentLoaded', function () {
       const colorSchemeToggle = document.getElementById('color-scheme-toggle');
       const body = document.body;
-  
       // Set the initial color scheme to dark mode
       body.classList.add('dark-mode');
-  
       const icon = colorSchemeToggle.querySelector('i');
-  
       // Set the initial icon to the moon icon (dark mode)
       icon.classList.add('fa-solid', 'fa-sun');
-  
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
-  
         // Toggle the icon classes
         if (icon.classList.contains('fa-sun')) {
           icon.classList.remove('fa-sun');
@@ -103,8 +97,14 @@
   <p>Hi! I'm Izzy Reiff. I'm a Cyber Officer in the U.S. Army.</p>
   <ul>
     <li>I was born and raised in Los Angeles, attended college in New York, and now reside in the intense heat of Augusta, Georgia.</li>
-    <li>I graduated from West Point with a B.S. in Cyber Science and a concentration in Cyber Operations. I had a lot of fun playing snare drum for our Pipes and Drums band and seeing Broadway shows with the Theater Arts Guild.</li>
-    <li>In high school, I built websites and created content for various startups, companies, and people. I also co-founded an app called <a href="https://techcrunch.com/2018/07/22/trill-project-aims-to-be-a-safe-community-for-people-to-express-their-true-selves/" target="_blank" rel="noopener noreferrer">The Trill Project</a>, which was a <a href="https://techcrunch.com/2021/10/05/blue-fever-an-anonymous-social-network-acquires-gen-z-founded-trill/" target="_blank" rel="noopener noreferrer">blast</a>!</li>
+    <li>I graduated from West Point with a B.S. in Cyber Science and a concentration in Cyber Operations.</li>
+    <ul>
+        <li>I had a lot of fun playing snare drum for our Pipes and Drums band and seeing Broadway shows with the Theater Arts Guild.</li>
+    </ul>
+    <li>In high school, I built websites and created content for various startups, companies, and people.</li>
+    <ul>
+        <li>I co-founded an app called <a href="https://techcrunch.com/2018/07/22/trill-project-aims-to-be-a-safe-community-for-people-to-express-their-true-selves/" target="_blank" rel="noopener noreferrer">The Trill Project</a>, which was an <a href="https://techcrunch.com/2021/10/05/blue-fever-an-anonymous-social-network-acquires-gen-z-founded-trill/" target="_blank" rel="noopener noreferrer">incredible</a> experience!</li></li>
+    </ul>
     <li>I'm passionate about many things, including attending concerts, scuba diving, web design, musicals, working out, connecting with new people, and traveling.</li>
   </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
