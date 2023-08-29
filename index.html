@@ -64,8 +64,68 @@
     color: #a72486;
     text-decoration-style: wavy;
 	}
+  /* Light mode styles */
+  body.light-mode {
+    background-color: #ffffff;
+    color: #273746;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* Button styles */
+  #color-scheme-toggle {
+    background-color: #ffffff;
+    color: #273746;
+    border: none;
+    padding: 2px 2px;
+    /* font-size: 16px; */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #color-scheme-toggle:hover {
+    background-color: #273746;
+    color: #ffffff;
+  }
+
+  /* Icon styles */
+  .icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 50%;
+    /* background-image: url('path-to-your-icon.png'); Replace with your icon image */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+  }
+
 	</style>
   <!-- <link rel="icon" type="img/png" href="" sizes="32x32"> -->
+  <script>
+    // JavaScript to toggle color mode
+  document.addEventListener('DOMContentLoaded', function () {
+    const colorSchemeToggle = document.getElementById('color-scheme-toggle');
+    const body = document.body;
+
+    // Check the user's preferred color scheme
+    const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    // Set the initial color scheme based on the user's preference
+    body.classList.add(userColorScheme + '-mode');
+
+    colorSchemeToggle.addEventListener('click', function () {
+      body.classList.toggle('light-mode');
+      body.classList.toggle('dark-mode');
+    });
+  });
+
+  </script>
 </head>
 
 <body>
@@ -81,6 +141,8 @@
     </li>
 	</ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
-  
+  <p>You can toggle Night/Day mode <button id="color-scheme-toggle">
+    <span class="icon" aria-hidden="true"></span>here</button>.
+  </p>
 </body>
 </html>
