@@ -48,9 +48,9 @@
     }
 
     #color-scheme-toggle {
-      position: fixed; /* Fixed positioning */
-      bottom: 25px; /* Adjust the distance from the bottom */
-      right: 25px; /* Adjust the distance from the right */
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,22 +81,22 @@
       // Set the initial color scheme based on the user's preference
       body.classList.add(userColorScheme + '-mode');
 
-      const icon = colorSchemeToggle.querySelector('.icon');
+      const icon = colorSchemeToggle.querySelector('i'); // Select the <i> element directly
 
       // Set the initial icon based on the user's preference
-      icon.classList.add(userColorScheme === 'dark' ? 'fa-regular fa-sun' : 'fa-regular fa-moon');
+      icon.classList.add(userColorScheme === 'dark' ? 'fa-moon' : 'fa-sun');
 
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
 
         // Toggle the icon classes
-        if (icon.classList.contains('fa-regular fa-sun')) {
-          icon.classList.remove('fa-regular fa-sun');
-          icon.classList.add('fa-regular fa-moon');
+        if (icon.classList.contains('fa-sun')) {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
         } else {
-          icon.classList.remove('fa-regular fa-moon');
-          icon.classList.add('fa-regular fa-sun');
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
         }
       });
     });
