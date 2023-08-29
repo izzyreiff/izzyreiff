@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/aac5439eef.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/982e2175e7.js" crossorigin="anonymous"></script>
   <style>
     * { box-sizing: border-box; }
     @font-face {
@@ -74,22 +74,19 @@
     document.addEventListener('DOMContentLoaded', function () {
       const colorSchemeToggle = document.getElementById('color-scheme-toggle');
       const body = document.body;
-
-      // Check the user's preferred color scheme
-      const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-      // Set the initial color scheme based on the user's preference
-      body.classList.add(userColorScheme + '-mode');
-
-      const icon = colorSchemeToggle.querySelector('i'); // Select the <i> element directly
-
-      // Set the initial icon based on the user's preference
-      icon.classList.add(userColorScheme === 'dark' ? 'fa-moon' : 'fa-sun');
-
+  
+      // Set the initial color scheme to dark mode
+      body.classList.add('dark-mode');
+  
+      const icon = colorSchemeToggle.querySelector('i');
+  
+      // Set the initial icon to the moon icon (dark mode)
+      icon.classList.add('fa-solid', 'fa-sun');
+  
       colorSchemeToggle.addEventListener('click', function () {
         body.classList.toggle('light-mode');
         body.classList.toggle('dark-mode');
-
+  
         // Toggle the icon classes
         if (icon.classList.contains('fa-sun')) {
           icon.classList.remove('fa-sun');
@@ -101,6 +98,7 @@
       });
     });
   </script>
+  
 
 </head>
 <body>
@@ -112,8 +110,6 @@
     <li>I'm passionate about many things, including attending concerts, scuba diving, web design, musicals, working out, connecting with new people, and traveling.</li>
   </ul>
   <p>You can find me on <a href="https://www.linkedin.com/in/izzyreiff/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://twitter.com/izzyreiff/" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="mailto:me+personal@isabellareiff.com" target="_blank" rel="noopener noreferrer">email</a> or Global (GAL).</p>
-  <button id="color-scheme-toggle">
-    <i class=""></i>
-  </button>
+  <button id="color-scheme-toggle"><i class=""></i></button>
 </body>
 </html>
