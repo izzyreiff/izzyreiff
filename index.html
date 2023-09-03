@@ -28,14 +28,6 @@
       color: #273746;
     }
 
-    a:any-link { color: rgb(255, 37, 197); }
-    a:hover, a:visited:hover a:visited {
-      /*color: #a72486;*/
-      color: rgb(255, 37, 197, 0.70);
-      /* color: #25ffe9; */
-      text-decoration-style: wavy;
-    }
-
     /* Light mode styles */
     body.light-mode {
       background-color: #ffffff;
@@ -48,6 +40,34 @@
       background-color: #212121;
       color: rgba(255, 255, 255, 0.87);
       transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* a:any-link { color: rgb(255, 37, 197); }
+    a:any-link { color: #ff69d7; }
+    a:hover, a:visited:hover a:visited {
+      color: #a72486;
+      color: rgb(255, 37, 197, 0.70);
+      color: #25ffe9;
+      text-decoration-style: wavy;
+    } */
+
+
+    /* Define link styles for light mode */
+    body.light-mode a:any-link {
+      color: #615eff; /* Define the color for links in light mode */
+    }
+    body.light-mode a:hover, a:visited:hover a:visited {
+      color: #2622ff; /* Define the color for hover/visited links in light mode */
+      text-decoration-style: wavy;
+    }
+
+    /* Define link styles for dark mode */
+    body.dark-mode a:any-link {
+      color: #ff5bd3; /* Define the color for links in dark mode */
+    }
+    body.dark-mode a:hover, a:visited:hover a:visited {
+      color: #ffa8e8; /* Define the color for hover/visited links in dark mode */
+      text-decoration-style: wavy;
     }
 
     /* Light mode toggle button */
