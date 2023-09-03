@@ -15,7 +15,13 @@
       font-family: 'EB Garamond', serif;
       font-style: normal;
       font-weight: 250;
-      src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond&display=swap');
+      src: url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    }
+    @font-face {
+      font-family: 'Courier Prime', monospace;
+      font-style: normal;
+      font-weight: 250;
+      src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
     }
 
     body {
@@ -23,7 +29,8 @@
       max-width: 90%;
       padding-left: 3%;
       padding-top: 5px;
-      font-family: 'EB Garamond', serif;
+      font-family: 'Courier Prime', monospace;
+      /* font-family: 'EB Garamond', serif; */
       line-height: 1.8;
       color: #273746;
     }
@@ -54,11 +61,9 @@
     /* Define link styles for dark mode */
     body.dark-mode a:any-link {
       color: #ff5bd3; /*Define the color for links in dark mode*/
-      /* color: #ff8ae0; */
     }
     body.dark-mode a:hover, a:visited:hover a:visited {
       color: #ffa8e8; /*Define the color for hover/visited links in dark mode */
-      /* color: #ff5bd3; */
       text-decoration-style: wavy;
     }
 
@@ -72,7 +77,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #eedae8; /*f0cce6*/
+      background-color: #eedae8;
       color: #273746;
       border: none;
       padding: 0;
@@ -94,7 +99,7 @@
     }
 
     #color-scheme-toggle:hover {
-      background-color: #fdc8ee; /*cdacc4*/
+      background-color: #fdc8ee;
       color: #ffffff;
     }
   </style>
