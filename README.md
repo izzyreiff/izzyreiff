@@ -1,6 +1,6 @@
 # Izzy Reiff's Personal Website
 
-Welcome to my personal website! This website provides information about me, Izzy Reiff. Whether you're here to learn about my background, interests, or connect with me, you'll find it all right here.
+Welcome to my personal website! Whether you're here to learn about my background, interests, or connect with me, you'll find it all right here. [Well, here.](https://izzyreiff.github.io/izzyreiff/)
 
 ## Table of Contents
 
